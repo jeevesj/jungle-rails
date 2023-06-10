@@ -1,23 +1,16 @@
-describe('Add to cart', function() {
-  it('adds a product to the cart', function() {
-      // Visit home page
-      cy.visit('http://localhost:3000')
+describe('Add to Cart', function() {
+  beforeEach(() => {
+    cy.visit('/') 
+  })
 
-      // Capture the initial count of the cart
-      cy.get('.cart-count')
-        .invoke('text')
-        .then((text) => {
-          const initialCount = parseInt(text)
+  it('can add a product to the cart', function() {
+    // Initially, the cart should be empty
+    cy.get('[data-testid="cart-count"]').should('have.text', '0')
 
-          // Click the 'Add to Cart' button of the first product
-          cy.get('.add-to-cart').first().click()
+    // Click on 'Add to Cart' button for the first product
+    cy.get('[data-testid="add-to-cart"]').first().click()
 
-          // Assert that the count of the cart button has increased by 1
-          cy.get('.cart-count')
-            .invoke('text')
-            .should((text) => {
-              expect(parseInt(text)).to.eq(initialCount + 1)
-            })
-        })
+    // The cart count should increase by 1
+    cy.get('[data-testid="cart-count"]').should('have.text', '1')
   })
 })
