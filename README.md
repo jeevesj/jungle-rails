@@ -1,6 +1,14 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+The Jungle project is an innovative e-commerce platform focused on offering a wide range of plants to customers. By leveraging technology and a seamless user interface, we aim to revolutionize the plant-buying experience, making it easy for anyone to find and purchase the right plant for their space. 
+
+## Views
+
+![adminview](https://github.com/jeevesj/jungle-rails/blob/master/app/assets/images/adminpanel.JPG?raw=true)
+
+![add a new product](https://github.com/jeevesj/jungle-rails/blob/master/app/assets/images/newprod.JPG?raw=true)
+
+![user view](https://github.com/jeevesj/jungle-rails/blob/master/app/assets/images/plants.JPG?raw=true)
 
 ## Setup
 
